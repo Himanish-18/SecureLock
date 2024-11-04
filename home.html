@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SecureLock - Password Manager</title>
+    <link rel="stylesheet" href="Home.css">
+    <script defer src="script.js"></script> <!-- Include your JavaScript file -->
+</head>
+<body>
+    <!-- Navbar Section -->
+    <nav>
+        <div class="logo">
+            <h1>SecureLock <span>🔒</span></h1>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="locker.html" target="_blank" class="restricted" style="pointer-events: none; opacity: 0.5;">Password Locker</a></li>
+            <li><a href="history.html" target="_blank" class="restricted" style="pointer-events: none; opacity: 0.5;">Password History</a></li>
+            <li><a href="generator.html" target="_blank" class="restricted" style="pointer-events: none; opacity: 0.5;">Password Generator</a></li>
+        </ul>
+        <!-- Authentication Buttons -->
+        <div id="authButtons">
+            <button id="loginBtn" class="signin-btn">Sign In</button>
+            <button id="signupBtn" class="signup-btn">Sign Up</button>
+        </div>
+        <!-- Welcome Message -->
+        <div id="welcomeMessage" style="display: none;"></div>
+    </nav>
+
+    <!-- Main Section -->
+    <section class="main">
+        <h2>Why Choose Our Password Manager?</h2>
+        <div class="features">
+            <div class="feature">
+                <h3>Secure Password Locker</h3>
+                <p>Keep your passwords safe in one vault protected by encryption.</p>
+            </div>
+            <div class="feature">
+                <h3>Strong Password Generator</h3>
+                <p>Generate secure and complex passwords to prevent unauthorized access.</p>
+            </div>
+            <div class="feature">
+                <h3>Password History</h3>
+                <p>Track your previously saved passwords for easy access and management.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works">
+        <h2>How It Works</h2>
+        <ol>
+            <li>Sign up or log in to create your secure account.</li>
+            <li>Store your passwords in the encrypted password locker.</li>
+            <li>Use the password generator for strong, random passwords.</li>
+            <li>Access your password history when needed.</li>
+        </ol>
+    </section>
+
+    <!-- Security Section -->
+    <section class="security">
+        <h2>Your Security is Our Priority</h2>
+        <p>All your passwords are stored using AES-256 encryption, ensuring that only you have access to your data.</p>
+    </section>
+
+    <!-- Sign In Modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span id="closeLoginModal" class="close">&times;</span>
+            <h2 style="color: black;">Sign In</h2>
+            <form>
+                <label for="loginUsername">Username:</label>
+                <input type="text" id="loginUsername" name="loginUsername" required><br><br>
+                <label for="loginPassword">Password:</label>
+                <input type="password" id="loginPassword" name="loginPassword" required><br><br>
+                <button type="button" id="loginSubmitBtn">Log In</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Sign Up Modal -->
+    <div id="signupModal" class="modal">
+        <div class="modal-content">
+            <span id="closeSignupModal" class="close">&times;</span>
+            <h2 style="color: black;">Sign Up</h2>
+            <form>
+                <label for="signupUsername">Username:</label>
+                <input type="text" id="signupUsername" name="signupUsername" required><br><br>
+                <label for="signupEmail">Email:</label>
+                <input type="email" id="signupEmail" name="signupEmail" required><br><br>
+                <label for="signupPassword">Password:</label>
+                <input type="password" id="signupPassword" name="signupPassword" required><br><br>
+                <button type="button" id="signupSubmitBtn">Sign Up</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 SecureLock. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

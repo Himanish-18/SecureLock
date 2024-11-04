@@ -1,0 +1,190 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #1c1c1c;
+    color: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+}
+
+.password-locker {
+    background-color: #333;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    width: 350px;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: slideUp 0.6s ease-out 0.3s forwards;
+}
+
+.password-locker h1 {
+    text-align: center;
+    color: #ffbb33;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    opacity: 0;
+    animation: fadeInText 0.7s ease forwards;
+}
+
+.password-locker label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    display: block;
+    color: #ffbb33;
+    opacity: 0;
+    transform: translateX(-20px);
+    animation: fadeInLeft 0.5s ease forwards;
+}
+
+.password-locker input {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 2px solid #ffbb33;
+    border-radius: 4px;
+    background-color: #222;
+    color: #fff;
+    font-size: 1rem;
+    opacity: 0;
+    transform: scale(0.9);
+    animation: scaleIn 0.4s ease forwards 0.5s;
+}
+
+.password-locker input::placeholder {
+    color: #b3b3b3;
+}
+
+.save-btn {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #ffbb33;
+    color: #333;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeInUp 0.5s ease forwards 0.8s;
+}
+
+.save-btn:hover {
+    background-color: #e6c300;
+}
+
+.password-entry {
+    background-color: #444;
+    padding: 0.75rem;
+    border-radius: 4px;
+    margin-bottom: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #f2f2f2;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideInEntry 0.5s ease-out forwards;
+}
+
+.password-entry .site-name {
+    font-weight: bold;
+    color: #ffbb33;
+}
+
+.password-entry .site-password {
+    color: #f2f2f2;
+    animation: pulse 1s infinite;
+}
+
+/* Keyframes for Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInText {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInEntry {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
